@@ -1,0 +1,23 @@
+n=int(input("enter the limit upto which you want to find that no is prime or not:"))
+dict={}
+for i in range(2,n+1):
+    num=i
+    for j in range(2,num):
+        if (num%j) ==0 :
+            dict[num]="nonprime"
+            break
+    else:
+       dict[num]="prime"
+
+print(dict)
+c=0
+a=[]
+for i in dict:
+    if dict[i] == "nonprime":
+       a.append(i)
+       c+=1
+
+for key in a:
+    dict.pop(key)
+print(" Non-Prime key-value pairs that are deleted:",c)
+print("new dictionary after deleting nonprime pair is:",dict)
