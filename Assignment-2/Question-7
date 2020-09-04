@@ -1,0 +1,11 @@
+n=int(input("enter the limit upto which you want to find that no is prime or not:"))
+list=[]
+for i in range(2,n+1):
+    for j in range(2,i):
+        if (i%j) ==0 :
+          list.append(tuple([i,"nonprime"]))
+          break
+    else:
+       list.append(tuple([i,"prime"]))
+
+print(list)
