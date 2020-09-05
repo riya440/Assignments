@@ -1,0 +1,15 @@
+def pangram(str):
+    c=0
+    for i in range(0, 26):
+        for j in str:
+            if (chr((97 + i)) == j or chr((65 + i)) == j):
+                c=c+1
+                break
+
+    if (c == 26):
+      print("string is pangram")
+    else:
+      print("string is not pangram")
+
+str = input("enter a string:")
+pangram(str)
