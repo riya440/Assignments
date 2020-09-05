@@ -1,0 +1,19 @@
+def summer_69(arr):
+    sum=0
+    for n in range(0,len(arr)):
+        if arr[n]<6:
+            sum+=arr[n]
+        elif arr[n]>9:
+            sum+=arr[n]
+        else:
+            pass
+    return sum
+
+from array import*
+n=int(input("how element you want to enter un the array"))
+list=[]
+for j in range (0,n):
+    element =int(input())
+    list.append(element)
+arr=array('i',list)
+print(summer_69(arr))
