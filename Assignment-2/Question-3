@@ -1,10 +1,14 @@
-def check_range(a,b,x):
-    if(a<x and x<b):
-        print("the no which is entered lie in the given range")
-    else:
-        print("the no which is entered does not lie in the given range")
+def calculate_letter(str):
+    c1=0
+    c2=0
+    for letter in str:
+        if letter.isupper():
+            c1+=1
+        elif letter.islower():
+            c2+=1
 
-a=int(input("lower value of range is: "))
-b=int(input("higher value of range is: "))
-x=int(input("enter the no which you want to find that it lie in the range or not: "))
-check_range(a,b,x)
+    print("UPPER CASE LETTER IS : ",c1)
+    print("LOWER CASE LETTER IS : ",c2)
+print("enter a string")
+str=input()
+calculate_letter(str)
